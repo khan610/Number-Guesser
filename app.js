@@ -14,15 +14,15 @@ let min = 1,
   guessesLeft = 3;
 
 // UI Elements
-const game = document.getElementById('game'),
+const game = document.querySelector('game'),
   minNum = document.querySelector('.min-num'),
   maxNum = document.querySelector('.max-num'),
   guessBtn = document.querySelector('.#guess-btn'),
-  guessInpact = document.querySelector('.#guess-input'),
+  guessInput = document.querySelector('.#guess-input'),
   message = document.querySelector('.message');
 
 // Assign UI min and max
-minNum.textContect = min;
+minNum.textContent = min;
 maxNum.textContent = max;
 
 // Listen for guess
@@ -47,7 +47,7 @@ guessBtn.addEventListener('click', function () {
 });
 
 // Set message
-function setMessage(msg) {
-  message.style.color = 'red';
+function setMessage(msg, color) {
+  message.style.color = color;
   message.textContent = msg;
 }
